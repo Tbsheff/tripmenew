@@ -1,0 +1,32 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 3rem;
+}
+
+table {
+    border-collapse: collapse;
+    position: relative;
+}
+
+td, th {
+    padding: .75rem;
+    border: 1px solid #ddd;
+}
+
+th{
+    background-color: #7a8ec4;
+}
+tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+
+tr {
+    transition: 50ms;
+}
+
+tr:hover {
+    background-color: #ddd;
+}

@@ -1,12 +1,38 @@
+{%load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="{% static 'main.css'%}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-    
+    <p>The school name is {{school_name}}</p>
+
+    <ul>
+        {% for sDegree in degrees %}
+        <li>
+            {{sDegree | upper }}
+        </li>
+        {%endfor%}
+    </ul>
+    <table>
+        <tr>
+            <th>last_name</th>
+            <th>first_name</th>
+            <th>gpa</th>
+            <th>major</th>
+        </tr>
+
+        {% for iCount in data %}
+        <tr>
+            {% for key, value in iCount.items%}
+            <td>{{value}}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
 </body>
 </html>
